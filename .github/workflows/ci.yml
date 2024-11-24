@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - uses: hashicorp/setup-packer
+      - uses: hashicorp/setup-packer@v3.1.0
       - name: Run `packer init`
         run: packer init .
       - name: Run `packer fmt`
