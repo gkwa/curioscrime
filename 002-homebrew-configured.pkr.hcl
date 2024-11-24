@@ -1,7 +1,7 @@
 source "incus" "homebrew" {
   image          = "001-homebrew-base"
   output_image   = "002-homebrew-configured"
-  container_name = "homebrew-configured"
+  container_name = "002-homebrew-configured"
   reuse          = true
   skip_publish   = false
 }
