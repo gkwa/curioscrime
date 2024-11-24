@@ -5,8 +5,14 @@ name: Build & Test
       - "**"
 jobs:
   build:
-    runs-on: ubuntu-latest
-    name: Packer First Attempt
+    name: Build & Test
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - macOS-latest
+          - windows-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
