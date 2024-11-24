@@ -22,5 +22,6 @@ terraform init
 terraform plan -out=tfplan
 terraform apply tfplan
 
+# Test that brew command runs as expected with example app packer
 incus exec 002-homebrew-configured -- bash -l -c 'brew install hashicorp/tap/packer && packer version'
 incus exec 002-homebrew-configured -- bash -l -c 'packer version'
