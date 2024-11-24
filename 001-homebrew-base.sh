@@ -54,11 +54,3 @@ EOF
 install_packages
 setup_linuxbrew_user
 install_homebrew
-
-if [ -f "${HOMEBREW_PREFIX}/bin/brew" ]; then
-    export PATH="/usr/local/bin:$PATH"
-    eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
-else
-    echo "Homebrew installation seems to have failed. Please check the logs."
-    exit 1
-fi
