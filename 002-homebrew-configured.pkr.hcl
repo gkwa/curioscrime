@@ -3,7 +3,7 @@ source "incus" "homebrew" {
   output_image   = "002-homebrew-configured"
   container_name = "homebrew-configured"
   reuse          = true
-  skip_publish   = true
+  skip_publish   = false
 }
 
 build {
