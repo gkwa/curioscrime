@@ -7,8 +7,8 @@ terraform {
 }
 
 resource "incus_instance" "instance1" {
-  image = "homebrew-configured"
-  name  = "homebrew-configured"
+  image = "002-homebrew-configured"
+  name  = "002-homebrew-configured"
 
   config = {
     "boot.autostart" = false
