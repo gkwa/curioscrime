@@ -26,4 +26,4 @@ terraform init
 terraform plan -out=tfplan
 terraform apply tfplan
 
-incus exec homebrew-configured -- bash -l -c 'brew install hashicorp/tap/packer'
+incus exec 002-homebrew-configured -- bash -l -c 'brew install hashicorp/tap/packer'
