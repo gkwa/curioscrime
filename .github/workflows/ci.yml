@@ -24,8 +24,7 @@ jobs:
         run: |
           curl https://pkgs.zabbly.com/get/incus-stable | sudo sh -x
       - name: Reset the firewall
-        run: |
-          sudo nft flush ruleset
+        run: sudo nft flush ruleset
       - name: Init incus
         run: sudo incus admin init --auto
       - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3

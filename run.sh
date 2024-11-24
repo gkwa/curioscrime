@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 packer init .
 
 if ! incus image info 001-homebrew-base &>/dev/null; then
