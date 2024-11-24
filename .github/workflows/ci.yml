@@ -36,7 +36,7 @@ jobs:
           sudo nft flush ruleset
       - name: Init incus
         run: sudo incus admin init --auto
-      - uses: hashicorp/setup-terraform@v3
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
       - name: Test
         run: sudo bash -xe run.sh
   required-check:
