@@ -4,6 +4,7 @@ default:
     @just --list
 
 fmt:
+    shfmt -w -s -i 4 *.sh
     packer fmt -recursive .
     terraform fmt .
     prettier --ignore-path=.prettierignore --config=.prettierrc.json --write .
