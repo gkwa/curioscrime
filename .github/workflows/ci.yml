@@ -28,6 +28,13 @@ jobs:
       - name: Run `packer validate`
         id: validate
         run: packer validate -syntax-only .
-      - name: Run `packer build`
-        id: build
-        run: bash -xe run.sh
+      - name: Install incus
+        run: |
+          curl https://pkgs.zabbly.com/get/incus-stable | sudo sh -x
+      - name: Reset the firewall
+        run: |
+          sudo nft flush ruleset
+      - name: Init incus
+        run: sudo incus admin init --auto
+      - name: Launch an arch container
+        run: sudo bash -xe run.sh
