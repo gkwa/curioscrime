@@ -39,3 +39,10 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
       - name: Test
         run: sudo bash -xe run.sh
+  required-check:
+    name: All Tests Passed
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "All tests passed!"
