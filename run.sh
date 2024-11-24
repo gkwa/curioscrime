@@ -14,7 +14,7 @@ fi
 
 # Clean up existing containers
 incus info 002-homebrew-configured &>/dev/null && incus rm --force 002-homebrew-configured
-incus info 001-homebrew-setup &>/dev/null && incus rm --force 001-homebrew-setup
+incus info 001-homebrew-base &>/dev/null && incus rm --force 001-homebrew-base
 
 terraform init
 terraform plan -out=tfplan
