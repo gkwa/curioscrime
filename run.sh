@@ -17,4 +17,4 @@ if ! incus image info 002-homebrew-configured &>/dev/null; then
     packer build 002-homebrew-configured.pkr.hcl
 fi
 
-incus exec homebrew-setup -- bash -l -c 'brew install hashicorp/tap/packer'
+incus exec homebrew-configured -- bash -l -c 'brew install hashicorp/tap/packer'
