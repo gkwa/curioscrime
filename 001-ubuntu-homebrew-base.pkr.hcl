@@ -1,12 +1,3 @@
-packer {
-  required_plugins {
-    incus = {
-      version = ">= 1.0.5"
-      source  = "github.com/bketelsen/incus"
-    }
-  }
-}
-
 source "incus" "jammy" {
   image          = "images:ubuntu/jammy/cloud"
   output_image   = "001-homebrew-base"
